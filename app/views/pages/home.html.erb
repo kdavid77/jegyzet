@@ -1,5 +1,17 @@
-<h1>Jegyzeteim</h1>
-<p>Tanulok... :D</p>
-Aktualis feladat: belepteto rendszer, 1 userrel
+<% elvegzett=[
+  "eljutni idaig",
+  "nincs tobb..."] %>
+
+<h1>Jegyzeteim fo oldala...</h1>
+
+<p>Aktualis feladat</p>
+<div class="feladat">Belepteto rendszer, 1 userrel</div>
+
 <hr>
-<%= link_to "login", login_path %>
+
+<p>Elvegzett feladatok</p>
+<ul>  
+  <% elvegzett.each do |e| %>
+    <li class="elvegzett"><%= e %></li>
+  <% end %>
+</ul>

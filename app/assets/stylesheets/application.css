@@ -11,8 +11,53 @@
  *= require_self
  *= require_tree .
  */
+html{
+  background-color: white;
+  overflow-y: scroll;
+}
+
 body{
   width: 960px;
   margin: 0 auto;
   background-color: #eaeaea;
+}
+
+section{
+  overflow: auto;
+}
+
+textarea{
+  resize: vertical;
+}
+
+#navbar{
+  float: left;
+  width: 100%;
+  background-color: #eaeaea;
+  padding-bottom: 20px;
+}
+
+#navbar li{
+  display: inline;
+  float: left;
+  text-decoration: none;
+}
+
+#navbar a, a:hover, a:visited, a:active{
+  text-decoration: none;
+  padding-left: 10px;
+}
+
+#content{
+  float: left;
+  width: 100%;
+}
+
+.feladat{
+  color: red;
+  padding-left: 40px;
+}
+
+.elvegzett{
+  color: green;
 }
