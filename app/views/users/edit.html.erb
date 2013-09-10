@@ -1,6 +1,5 @@
 <h1>Jelszo csere</h1>
-<%= current_user.name %>
-<%= redirect edit_user_path(current_user) %>
+
 <%= form_for (current_user) do |f| %>
   <%= f.label 'Regi jelszo' %>
   <%= f.password_field :old_password %>

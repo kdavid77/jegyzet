@@ -1,5 +1,4 @@
-<h1>Pages#login - belepteto oldal...</h1>
-<p>ezt kellene feltolteni es mukodove tenni... :D</p>
+<h1>Belepes</h1>
 
 <%= form_for(:session, url: sessions_path) do |f| %>
 
@@ -9,6 +8,6 @@
   <%= f.label :password %>
   <%= f.password_field :password %>
   
-  <%= f.submit "Login" %>
+  <%= f.submit "Login", class: "btn" %>
 
 <% end %>

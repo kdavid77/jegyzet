@@ -1,6 +1,10 @@
 <% @post=Post.find_by_id(params[:id]) %>
 <div id="post-title">
-  <%= link_to @post.title.capitalize, edit_post_path(@post) %>
+  <% if signed_in? %>
+    <%= link_to @post.title.capitalize, edit_post_path(@post) %>
+  <% else %>
+    <%= @post.title.capitalize %>
+  <% end %>
 </div>
 
 <div id="post-content">

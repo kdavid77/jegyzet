@@ -1,9 +1,9 @@
 class SessionsController < ApplicationController
   def new
-    user=User.find_by_name('dodi') 
-    if (user.nil?)
-      user=User.new(name: 'dodi',password: 'akarmi', password_confirmation: 'akarmi')
-      user.save
+    @user=User.find_by_name('dodi') 
+    if (@user.nil?)
+      @user=User.new(name: 'dodi',password: 'akarmi', password_confirmation: 'akarmi')
+      @user.save
     end
   end
   

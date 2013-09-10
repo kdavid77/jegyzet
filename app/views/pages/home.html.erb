@@ -1,6 +1,9 @@
-<%= render 'form' %>
+<% if signed_in? %>
+  <%= render 'form' %>
+<% end %>
 
 <% elvegzett=[
+  "Post megjelenites es modositas",
   "Post letrehozas",
   "Belepteto rendszer, 1 userrel",
   "eljutni idaig",
@@ -9,7 +12,7 @@
 <h2>Feladatok:</h2>
 
 <p>Aktualis:</p>
-<div class="feladat">Post megjelenites es modositas
+<div class="feladat">Hozzaferes korlatozas<br>jelszo modositas<br>csinositas<br>modosithato fooldal
 </div>
 
 <p>Elvegzett</p>
