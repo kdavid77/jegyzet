@@ -1,0 +1,11 @@
+<div id="navbar">
+  <ul>
+    <li><%= link_to 'HOME', root_path %></li>
+    <% if signed_in? %>
+      <li><%= link_to 'SETTINGS', 'settings', method: "get" %></li>
+      <li><%= link_to 'LOGOUT', logout_path, method: "delete" %></li>
+    <% else %>
+      <li><%= link_to 'LOGIN', login_path %></li>
+    <% end %>
+  </ul>
+</div>

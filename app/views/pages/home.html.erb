@@ -1,12 +1,12 @@
 <%= form_for(:post, url: posts_path) do |f|%>
   
-  <%= f.label "Cim" %>
+  <%= f.label "Cim", class: "label" %>
   <%= f.text_field :title %>
   
-  <%= f.label "Tartalom" %>
+  <%= f.label "Tartalom", class: "label" %>
   <%= f.text_area :content %>
   
-  <%= f.submit "OK" %>
+  <%= f.submit "OK", class: "btn" %>
 
 <% end %>
 
@@ -17,7 +17,7 @@
   "eljutni idaig",
   "nincs tobb..."] %>
 
-<h2>Feladatok:</h1>
+<h2>Feladatok:</h2>
 
 <p>Aktualis:</p>
 <div class="feladat">Post megjelenites es modositas
