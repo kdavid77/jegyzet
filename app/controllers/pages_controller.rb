@@ -4,4 +4,7 @@ class PagesController < ApplicationController
 
   def login
   end
+  
+  def settings
+  end
 end

@@ -1,15 +1,29 @@
+<%= form_for(:post, url: posts_path) do |f|%>
+  
+  <%= f.label "Cim" %>
+  <%= f.text_field :title %>
+  
+  <%= f.label "Tartalom" %>
+  <%= f.text_area :content %>
+  
+  <%= f.submit "OK" %>
+
+<% end %>
+
+
 <% elvegzett=[
+  "Post letrehozas",
+  "Belepteto rendszer, 1 userrel",
   "eljutni idaig",
   "nincs tobb..."] %>
 
-<h1>Jegyzeteim fo oldala...</h1>
+<h2>Feladatok:</h1>
 
-<p>Aktualis feladat</p>
-<div class="feladat">Belepteto rendszer, 1 userrel</div>
+<p>Aktualis:</p>
+<div class="feladat">Post megjelenites es modositas
+</div>
 
-<hr>
-
-<p>Elvegzett feladatok</p>
+<p>Elvegzett</p>
 <ul>  
   <% elvegzett.each do |e| %>
     <li class="elvegzett"><%= e %></li>

@@ -1,10 +1,12 @@
 Jegyzet::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+  resources :posts
   #get "pages/home"
   root 'pages#home'
   #get "pages/login"
   match '/login', to: 'sessions#new', via: 'get'
+  match '/settings', to: 'pages#settings', via: 'get'
   match '/logout', to: 'sessions#destroy', via: 'delete'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
