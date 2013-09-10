@@ -22,7 +22,7 @@ html{
 body{
   width: 960px;
   margin: 0 auto;
-  background-color: #eaeaea;
+
 }
 
 section{
@@ -41,6 +41,10 @@ input, textarea{
 
 input{
   height: auto !important;
+}
+
+textarea{
+  min-height: 200px;
 }
 
 .btn{
@@ -65,11 +69,20 @@ input{
   display: inline;
   float: left;
   text-decoration: none;
+  background-color: #AAAAFF;
+  margin: 2px;
+  padding: 5px;
 }
 
 #navbar a, a:visited, a:active{
   text-decoration: none;
-  padding-left: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+#navbar a:hover{
+  border-bottom: 1px solid black;
 }
 
 .feladat{
@@ -98,6 +111,15 @@ bottom{
   list-style: none;
 }
 
+#left a, a:active, a:visited{
+  text-decoration: none;
+  font-style: italic;
+}
+
+#left a:hover{
+  border-bottom: 1px solid black;
+}
+
 #right{
   width: 20%;
   float: left;
@@ -106,6 +128,14 @@ bottom{
 #content{
   width: 70%;
   float: left;
+}
+
+#content a, a:active, a:visited{
+  text-decoration: none;
+}
+
+#content a:hover{
+  border-bottom: 1px solid black;
 }
 
 .alert-error{

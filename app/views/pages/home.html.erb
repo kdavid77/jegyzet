@@ -2,22 +2,9 @@
   <%= render 'form' %>
 <% end %>
 
-<% elvegzett=[
-  "Post megjelenites es modositas",
-  "Post letrehozas",
-  "Belepteto rendszer, 1 userrel",
-  "eljutni idaig",
-  "nincs tobb..."] %>
+<% home_content=Post.find_by_title("Home") %>
 
-<h2>Feladatok:</h2>
-
-<p>Aktualis:</p>
-<div class="feladat">Hozzaferes korlatozas<br>jelszo modositas<br>csinositas<br>modosithato fooldal
-</div>
-
-<p>Elvegzett</p>
-<ul>  
-  <% elvegzett.each do |e| %>
-    <li class="elvegzett"><%= e %></li>
-  <% end %>
-</ul>
+<% if home_content.nil? %>
+<% else %>
+  <%= raw(home_content.content) %>
+<% end %>
