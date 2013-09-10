@@ -1,0 +1,8 @@
+<% @post=Post.find_by_id(params[:id]) %>
+<div id="post-title">
+  <%= link_to @post.title.capitalize, edit_post_path(@post) %>
+</div>
+
+<div id="post-content">
+  <%= @post.content %>
+</div>

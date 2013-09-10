@@ -1,0 +1,8 @@
+<ul>
+  <% allposts=Post.all %>
+  <% allposts.each do |f| %>
+     <li>
+       <%= link_to f.title, f %>
+     </li>
+  <% end %>
+</ul>

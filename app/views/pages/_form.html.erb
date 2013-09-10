@@ -1,0 +1,17 @@
+<% if @post.nil? %>
+  <% @post=Post.new %>
+<% else %>
+  <% @post=Post.find_by_id(params[:id]) %>
+<% end %>
+
+<%= form_for(@post) do |f|%>
+  
+  <%= f.label "Cim", class: "label" %>
+  <%= f.text_field :title %>
+  
+  <%= f.label "Tartalom", class: "label" %>
+  <%= f.text_area :content %>
+  
+  <%= f.submit "OK", class: "btn" %>
+
+<% end %>

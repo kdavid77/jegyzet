@@ -92,7 +92,10 @@ bottom{
 #left{
   width: 30%;
   float: left;
-  background-color: green;
+}
+
+#left li{
+  list-style: none;
 }
 
 #right{
@@ -111,4 +114,17 @@ bottom{
 
 .alert-success{
   color: green;
+}
+
+/* megjelenitett posztok  */
+
+#post-title{
+  background-color: #eaeaea;
+  color: green;
+  letter-spacing: 2px;
+}
+
+#post-content
+{
+  padding-top: 5px;
 }
