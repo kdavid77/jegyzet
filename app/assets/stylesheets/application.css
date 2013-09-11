@@ -169,7 +169,7 @@ bottom{
 
 .post-left{
   font-weight: bold;
-  width: 49%;
+  width: 45%;
   float: left;
   padding-right: 5px;
   border-right: 1px dotted black;
@@ -178,7 +178,7 @@ bottom{
 
 .post-right{
   font-style: italic;
-  width: 49%;
+  width: 45%;
   float: left;
   padding-left: 5px;
   text-align: left;
