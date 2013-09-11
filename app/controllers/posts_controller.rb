@@ -32,10 +32,16 @@ class PostsController < ApplicationController
     redirect_to(@post)
   end
   
+  def destroy
+    Post.find_by_id(params[:id]).destroy
+    flash[:success] = "Torolve"
+    redirect_to root_path
+  end
+  
   private
   
     def post_params
-      params.require(:post).permit(:title, :content)
+      params.require(:post).permit(:id, :title, :content)
     end
   
 end

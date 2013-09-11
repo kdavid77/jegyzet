@@ -160,6 +160,11 @@ bottom{
   padding-top: 5px;
 }
 
+.post-del{
+  color: red;
+}
+
+
 /*  formatted post display */
 
 .post-left{

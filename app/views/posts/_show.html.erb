@@ -9,17 +9,23 @@
 
 <div id="post-content">
   <% disp = @post.content %>
-  <% line = disp.split(';') %>
-  <% line.each do |l| %>
-    <% element = l.split(':') %>
-    <% case element.first.gsub("/\s+"," ").strip %>
-    <% when 'text' %>
-      <%= raw('<p>' + element.second + '</p>') %>
-    <% when 'cim' %>
-      <%= raw('<div class="post-cim">' + element.second + '</div>') %>
-    <% else %>
-      <%= raw('<div class="post-left">' + element.first + '</div>') %>
-      <%= raw('<div class="post-right">' + element.second + '</div>') %>
+  <% if disp.empty? %>
+    <%= "nincs tartalom... " %>
+  <% else %>
+    <% line = disp.split(';') %>
+    <% line.each do |l| %>
+      <% unless l.nil? || l.empty? %>
+        <% element = l.split(':') %>
+        <% case element.first.gsub("/\s+"," ").strip %>
+          <% when 'text' %>
+            <%= raw('<p>' + element.second + '</p>') %>
+          <% when 'cim' %>
+            <%= raw('<div class="post-cim">' + element.second + '</div>') %>
+          <% else %>
+            <%= raw('<div class="post-left">' + element.first + '</div>') %>
+            <%= raw('<div class="post-right">' + element.second.to_s + '</div>') %>
+        <% end %>
+      <% end %>
     <% end %>
   <% end %>
 </div>
