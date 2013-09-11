@@ -3,7 +3,9 @@
   <% allposts.each do |f| %>
      <li>
        <%= link_to f.title, f %>
-       <%= link_to "del", f, method: :delete, data: { confirm: "Biztos?" }, class: "post-del" %>
+       <% if signed_in? %>
+         <%= link_to "del", f, method: :delete, data: { confirm: "Biztos?" }, class: "post-del" %>
+       <% end %>
      </li>
   <% end %>
 </ul>
