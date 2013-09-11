@@ -1,12 +1,12 @@
 <div id="navbar">
   <ul>
     <% if signed_in? %>
-      <li><%= link_to 'JEGYZETEK', root_path %></li>
-      <li><%= link_to 'JELSZO', edit_user_path(current_user) %></li>
-      <li><%= link_to 'LOGOUT', logout_path, method: "delete" %></li>
+      <li><%= link_to_unless_current 'JEGYZETEK', root_path %></li>
+      <li><%= link_to_unless_current 'JELSZO', edit_user_path(current_user) %></li>
+      <li><%= link_to_unless_current 'LOGOUT', logout_path, method: "delete" %></li>
     <% else %>
-      <li><%= link_to 'HOME', root_path %></li>
-      <li><%= link_to 'LOGIN', login_path %></li>
+      <li><%= link_to_unless_current 'HOME', root_path %></li>
+      <li><%= link_to_unless_current 'LOGIN', login_path %></li>
     <% end %>
   </ul>
 </div>

@@ -15,10 +15,10 @@
     <% line = disp.split(';') %>
     <% line.each do |l| %>
       <% unless l.nil? || l.empty? %>
-        <% element = l.split(':') %>
+        <% element = l.split('|') %>
         <% case element.first.gsub("/\s+"," ").strip %>
           <% when 'text' %>
-            <%= raw('<p>' + element.second + '</p>') %>
+            <%= raw('<div class="post-text">' + element.second + '</div>') %>
           <% when 'cim' %>
             <%= raw('<div class="post-cim">' + element.second + '</div>') %>
           <% else %>
