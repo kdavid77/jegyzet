@@ -122,7 +122,8 @@ bottom{
 
 #content{
   width: 700px;
-  float: left;
+  float: right;
+  display: block;
 }
 
 #content a, a:active, a:visited{
