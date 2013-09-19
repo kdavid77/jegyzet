@@ -104,6 +104,7 @@ bottom{
 
 #left{
   width: 260px;
+  min-height: 2000px;
   float: left;
 }
 
